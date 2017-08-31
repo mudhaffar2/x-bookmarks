@@ -1,0 +1,36 @@
+{
+  "name": "x-bookmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "prebuild": "jshint && mkdirp docs && cp src/index.html docs/",
+    "build": "browserify src/index.js -o docs/bundle.js && node-sass src/style.scss docs/style.css",
+    "postbuild": "uglifyjs docs/bundle.js -o docs/bundle.js",
+    "test": "npm run build && wdio test/wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mudhaffar2/x-bookmarks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mudhaffar2/x-bookmarks/issues"
+  },
+  "homepage": "https://github.com/mudhaffar2/x-bookmarks#readme",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "cp": "^0.2.0",
+    "jshint": "latest",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "uglify-js": "latest",
+    "wdio": "^1.0.0",
+    "wdio-mocha-framework": "^0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "wdio-spec-reporter": "^0.1.2",
+    "wdio-static-server-service": "^1.0.1",
+    "xt-sc-bookmarks": "github:zeropaper/xt-sc-bookmarks"
+  }
+}
