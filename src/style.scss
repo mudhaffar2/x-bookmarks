@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #777;
+  box-shadow: .1px 4px 4px #666;
+  display: flex;
+  form {
+    min-width: 300px;
+    max-width: 550px;
+    padding: 10px 0px;
+    margin: auto;
+  }
+}
+
+.columns {
+
+  display: flex;
+  flex-direction: row;
+}
+
+.grow {
+  flex-grow: 2;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+
+}
+
+input, textarea, button {
+  width:100%;
+  font-size: 1.5em;
+  display:block;
+}
+
+
+
+
+
